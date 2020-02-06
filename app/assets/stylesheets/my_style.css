@@ -1,3 +1,15 @@
 .my-pic{
-    width: 300px;
+    width: 18rem;
+}
+
+.button{
+    color: red;
+}
+
+.font{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.my-card {
+    margin-bottom: 100px;
 }

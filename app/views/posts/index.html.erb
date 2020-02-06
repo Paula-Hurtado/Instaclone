@@ -1,6 +1,19 @@
-<h1>my posts</h1>
+<div class = "conteiner">
+    <div class = "row">
+        <div class = "col-4"></div>
+        <div class = "col-4">
+            <h1 class="font">my posts</h1>
+            <% @posts.each do |post| %>
+                <div class="card my-card" style="width: 18rem;">
+                  <%= link_to(image_tag(post.pic, class: "my-pic"), post) %>
+                  <div class="card-body">
+                    <p class="card-text"><%= post.caption %> | photo by: <%= link_to post.user.email, post.user%></p>
+                  </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
 
-<% @posts.each do |post| %>
-    <%= image_tag post.pic, class: "my-pic" %>
-    <p><%= post.caption %></p>
-<% end %>
+
+

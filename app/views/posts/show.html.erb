@@ -1,2 +1,10 @@
+<h1 class = "font"> Here are my posts </h1>
+
 <%= image_tag @post.pic, class: "my-pic" %>
 <p><%= @post.caption %></p>
+<% if current_user == @post.user %>
+    <%= button_to "Delete", @post, method: :delete, class: "button" %>
+    <%= button_to "Edit", "/post/#{@post.id}/edit", method: :get, class: "button" %>
+<% end %>
+
+<%= link_to @post.user.email, user_path %>

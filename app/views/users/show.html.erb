@@ -1,5 +1,10 @@
 
-<%= @user.email %>
+<h1 class ="font"> user show </h1> 
+
+<%= @user.email %>'s page
+
 <% @user.posts.each do |post| %>
+    <%= link_to(image_tag(post.pic, class: "my-pic"), "/post/#{post.id}") %>
+    <p><%= post.caption %><p>
 <% end %>
-user index 
+
