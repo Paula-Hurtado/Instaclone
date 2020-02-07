@@ -33,6 +33,7 @@ class PostsController < ApplicationController
         end 
     end
     def update
+        post = Post.find(params[:id])
         if current_user == post.user
             post = Post.find(params[:id])
             post.update(post_params)
